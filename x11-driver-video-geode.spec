@@ -7,7 +7,7 @@ URL: http://xorg.freedesktop.org
 Source: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-geode-%{version}.tar.bz2
 License: MIT
 BuildRoot: %{_tmppath}/%{name}-root
- 
+ExclusiveArch: %{ix86}
 BuildRequires: x11-proto-devel >= 1.0.0
 BuildRequires: x11-server-devel >= 1.0.1
 BuildRequires: x11-util-macros >= 1.0.1
