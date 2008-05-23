@@ -1,3 +1,7 @@
+#   Module is dynamically loaded and references to X Server, and other
+# modules resolved at runtime.
+%define _disable_ld_no_undefined 1
+
 Name: x11-driver-video-geode
 Version: 2.9.0
 Release: %mkrel 2
