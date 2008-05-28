@@ -5,7 +5,7 @@
 Name: x11-driver-video-geode
 Version: 2.9.0
 Release: %mkrel 2
-Summary: The X.org driver for AMD Geode GX and LX Processors
+Summary: X.org driver for AMD Geode GX and LX Processors
 Group: System/X11
 URL: http://xorg.freedesktop.org
 Source: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-geode-%{version}.tar.bz2
