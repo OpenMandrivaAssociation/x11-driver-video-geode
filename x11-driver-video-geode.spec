@@ -20,7 +20,7 @@ Conflicts: x11-driver-video-amd < 2.7.7.7-2mdv
 
 %description
 This is the X graphics driver for the AMD Geode GX and LX processors.
-The GX driver features XAA and EXA support for graphics acceleration,
+The GX driver features XAA and EXA support for graphics acceleration,.
 and the LX driver supports EXA (including compositing).  Both drivers
 suppport dynamic rotation with XRandR, and Xv overlay support.
 
