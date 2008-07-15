@@ -3,8 +3,8 @@
 %define _disable_ld_no_undefined 1
 
 Name: x11-driver-video-geode
-Version: 2.9.0
-Release: %mkrel 3
+Version: 2.10.0
+Release: %mkrel 1
 Summary: X.org driver for AMD Geode GX and LX Processors
 Group: System/X11
 URL: http://xorg.freedesktop.org
