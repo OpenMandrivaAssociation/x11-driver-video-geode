@@ -2,13 +2,30 @@
 # modules resolved at runtime.
 %define _disable_ld_no_undefined 1
 
-Name: x11-driver-video-geode
-Version: 2.10.1
-Release: %mkrel 1
+%define name		x11-driver-video-%{chipset}
+%define chipset		geode
+# 20081113
+%define snapshot	0
+%define version		2.10.1
+%define rel		1
+%if %snapshot
+%define release		%mkrel 2.%{snapshot}.%{rel}
+%define distname	xf86-video-%{chipset}-%{snapshot}
+%else
+%define release		%mkrel %{rel}
+%define distname	xf86-video-%{chipset}-%{version}
+%endif
+
+Name: %{name}
+Version: %{version}
+Release: %{release}
 Summary: X.org driver for AMD Geode GX and LX Processors
 Group: System/X11
 URL: http://xorg.freedesktop.org
-Source: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-geode-%{version}.tar.bz2
+# git://anongit.freedesktop.org/git/xorg/driver/xf86-video-geode
+# git archive --format=tar --prefix=xf86-video-geode-$(date +%Y%m%d)/ master |
+#   bzip2 > ../xf86-video-geode-$(date +%Y%m%d).tar.bz2
+Source: http://xorg.freedesktop.org/releases/individual/driver/%{distname}.tar.bz2
 License: MIT
 BuildRoot: %{_tmppath}/%{name}-root
 ExclusiveArch: %{ix86}
@@ -26,7 +43,10 @@ and the LX driver supports EXA (including compositing).  Both drivers
 suppport dynamic rotation with XRandR, and Xv overlay support.
 
 %prep
-%setup -q -n xf86-video-geode-%{version}
+%setup -q -n %{distname}
+%if %snapshot
+./autogen.sh
+%endif
 
 %build
 %configure
