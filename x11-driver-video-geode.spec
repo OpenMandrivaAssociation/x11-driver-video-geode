@@ -45,7 +45,8 @@ suppport dynamic rotation with XRandR, and Xv overlay support.
 
 %prep
 %setup -q -n %{distname}
-%patch0 -p1 -b .sds
+# used on Guillemot eCafe
+#%patch0 -p1 -b .sds
 %if %snapshot
 ./autogen.sh
 %endif
