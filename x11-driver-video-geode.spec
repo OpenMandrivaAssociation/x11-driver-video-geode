@@ -26,6 +26,7 @@ URL: http://xorg.freedesktop.org
 # git archive --format=tar --prefix=xf86-video-geode-$(date +%Y%m%d)/ master |
 #   bzip2 > ../xf86-video-geode-$(date +%Y%m%d).tar.bz2
 Source: http://xorg.freedesktop.org/releases/individual/driver/%{distname}.tar.bz2
+Patch0: xf86-video-geode-2.9.0-scale-display.patch
 License: MIT
 BuildRoot: %{_tmppath}/%{name}-root
 ExclusiveArch: %{ix86}
@@ -44,6 +45,7 @@ suppport dynamic rotation with XRandR, and Xv overlay support.
 
 %prep
 %setup -q -n %{distname}
+%patch0 -p1 -b .sds
 %if %snapshot
 ./autogen.sh
 %endif
