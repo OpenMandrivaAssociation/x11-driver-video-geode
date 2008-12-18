@@ -57,6 +57,7 @@ suppport dynamic rotation with XRandR, and Xv overlay support.
 %endif
 
 %build
+autoreconf -v --install
 %configure
 %make
 
