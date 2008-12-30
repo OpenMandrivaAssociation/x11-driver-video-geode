@@ -7,7 +7,7 @@
 # 20081113
 %define snapshot	0
 %define version		2.11.0
-%define rel		1
+%define rel		2
 %if %snapshot
 %define release		%mkrel 2.%{snapshot}.%{rel}
 %define distname	xf86-video-%{chipset}-%{snapshot}
