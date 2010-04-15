@@ -6,7 +6,7 @@
 %define chipset		geode
 # 20081113
 %define snapshot	0
-%define version		2.11.7
+%define version		2.11.8
 %define rel		1
 %if %snapshot
 %define release		%mkrel 2.%{snapshot}.%{rel}
@@ -58,7 +58,7 @@ suppport dynamic rotation with XRandR, and Xv overlay support.
 
 %build
 autoreconf -v --install
-%configure
+%configure2_5x
 %make
 
 %install
