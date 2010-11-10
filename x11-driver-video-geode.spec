@@ -7,7 +7,7 @@
 # 20081113
 %define snapshot	0
 %define version		2.11.10
-%define rel		2
+%define rel		3
 %if %snapshot
 %define release		%mkrel 2.%{snapshot}.%{rel}
 %define distname	xf86-video-%{chipset}-%{snapshot}
@@ -41,6 +41,7 @@ Provides: x11-driver-video-nsc
 Obsoletes: x11-driver-video-amd
 Obsoletes: x11-driver-video-cyrix <= 1.1.0-7mdv2008.1
 Obsoletes: x11-driver-video-nsc <= 2.8.3-5mdv2009.0
+Requires: x11-server-common %(xserver-sdk-abi-requires videodrv)
 
 %description
 This is the X graphics driver for the AMD Geode GX and LX processors.
