@@ -1,4 +1,4 @@
-#   Module is dynamically loaded and references to X Server, and other
+# Module is dynamically loaded and references to X Server, and other
 # modules resolved at runtime.
 %define _disable_ld_no_undefined 1
 
@@ -33,9 +33,10 @@ ExclusiveArch: %{ix86}
 BuildRequires: x11-proto-devel >= 1.0.0
 BuildRequires: x11-server-devel >= 1.0.1
 BuildRequires: x11-util-macros >= 1.3.0
-# geode replaces amd driver (renamed in order to prevent confusion after AMD/ATI merge),
-# and cyrix and nsc drivers (http://lists.freedesktop.org/archives/xorg/2008-July/036970.html)
-Provides: x11-driver-video-amd 
+# geode replaces amd driver (renamed in order to prevent confusion after AMD/ATI
+# merge), and cyrix and nsc drivers
+# (http://lists.freedesktop.org/archives/xorg/2008-July/036970.html)
+Provides: x11-driver-video-amd
 Provides: x11-driver-video-cyrix
 Provides: x11-driver-video-nsc
 Obsoletes: x11-driver-video-amd
