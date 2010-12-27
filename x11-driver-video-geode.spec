@@ -6,8 +6,8 @@
 %define chipset		geode
 # 20081113
 %define snapshot	0
-%define version		2.11.10
-%define rel		3
+%define version		2.11.11
+%define rel		1
 %if %snapshot
 %define release		%mkrel 2.%{snapshot}.%{rel}
 %define distname	xf86-video-%{chipset}-%{snapshot}
@@ -58,7 +58,6 @@ suppport dynamic rotation with XRandR, and Xv overlay support.
 %endif
 
 %build
-autoreconf -v --install
 %configure2_5x
 %make
 
