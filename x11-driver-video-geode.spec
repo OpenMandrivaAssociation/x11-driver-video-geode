@@ -6,7 +6,7 @@
 %define chipset		geode
 # 20081113
 %define snapshot	0
-%define version		2.11.11
+%define version		2.11.12
 %define rel		1
 %if %snapshot
 %define release		%mkrel 2.%{snapshot}.%{rel}
