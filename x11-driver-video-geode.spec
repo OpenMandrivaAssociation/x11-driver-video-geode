@@ -9,7 +9,7 @@
 %define chipset		geode
 # 20081113
 %define snapshot	0
-%define rel			1
+%define rel		2
 %if %snapshot
 %define release		0.%{snapshot}.%{rel}
 %define distname	xf86-video-%{chipset}-%{snapshot}
@@ -29,7 +29,7 @@ Source: http://xorg.freedesktop.org/releases/individual/driver/%{distname}.tar.b
 Patch0: xf86-video-geode-2.9.0-scale-display.patch
 ExclusiveArch: %{ix86}
 BuildRequires: x11-proto-devel >= 1.0.0
-BuildRequires: x11-server-devel >= 1.0.1
+BuildRequires: x11-server-devel >= 1.12
 BuildRequires: x11-util-macros >= 1.3.0
 # geode replaces amd driver (renamed in order to prevent confusion after AMD/ATI
 # merge), and cyrix and nsc drivers
