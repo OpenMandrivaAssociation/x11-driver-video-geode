@@ -9,7 +9,7 @@
 %define chipset		geode
 # 20081113
 %define snapshot	0
-%define rel		2
+%define rel		3
 %if %snapshot
 %define release		0.%{snapshot}.%{rel}
 %define distname	xf86-video-%{chipset}-%{snapshot}
@@ -18,29 +18,29 @@
 %define distname	xf86-video-%{chipset}-%{version}
 %endif
 
-Name: x11-driver-video-%{chipset}
-Version: 2.11.13
-Release: %{release}
-Summary: X.org driver for AMD Geode GX and LX Processors
-Group: System/X11
-License: MIT
-URL: http://xorg.freedesktop.org
-Source: http://xorg.freedesktop.org/releases/individual/driver/%{distname}.tar.bz2
-Patch0: xf86-video-geode-2.9.0-scale-display.patch
-ExclusiveArch: %{ix86}
-BuildRequires: x11-proto-devel >= 1.0.0
-BuildRequires: x11-server-devel >= 1.12
-BuildRequires: x11-util-macros >= 1.3.0
+Name:		x11-driver-video-%{chipset}
+Version:	2.11.13
+Release:	%{release}
+Summary:	X.org driver for AMD Geode GX and LX Processors
+Group:		System/X11
+License:	MIT
+URL:		http://xorg.freedesktop.org
+Source0:	http://xorg.freedesktop.org/releases/individual/driver/%{distname}.tar.bz2
+Patch0:		xf86-video-geode-2.9.0-scale-display.patch
+ExclusiveArch:	%{ix86}
+BuildRequires:	x11-proto-devel >= 1.0.0
+BuildRequires:	x11-server-devel >= 1.12
+BuildRequires:	x11-util-macros >= 1.3.0
 # geode replaces amd driver (renamed in order to prevent confusion after AMD/ATI
 # merge), and cyrix and nsc drivers
 # (http://lists.freedesktop.org/archives/xorg/2008-July/036970.html)
-Provides: x11-driver-video-amd
-Provides: x11-driver-video-cyrix
-Provides: x11-driver-video-nsc
-Obsoletes: x11-driver-video-amd
-Obsoletes: x11-driver-video-cyrix <= 1.1.0-7mdv2008.1
-Obsoletes: x11-driver-video-nsc <= 2.8.3-5mdv2009.0
-Requires: x11-server-common %(xserver-sdk-abi-requires videodrv)
+Provides:	x11-driver-video-amd
+Provides:	x11-driver-video-cyrix
+Provides:	x11-driver-video-nsc
+Obsoletes:	x11-driver-video-amd
+Obsoletes:	x11-driver-video-cyrix <= 1.1.0-7mdv2008.1
+Obsoletes:	x11-driver-video-nsc <= 2.8.3-5mdv2009.0
+Requires:	x11-server-common %(xserver-sdk-abi-requires videodrv)
 
 %description
 This is the X graphics driver for the AMD Geode GX and LX processors.
