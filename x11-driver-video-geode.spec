@@ -27,6 +27,7 @@ License:	MIT
 URL:		http://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/%{distname}.tar.bz2
 Patch0:		xf86-video-geode-2.9.0-scale-display.patch
+Patch1:		geode-git.patch
 ExclusiveArch:	%{ix86}
 BuildRequires:	x11-proto-devel >= 1.0.0
 BuildRequires:	x11-server-devel >= 1.12
@@ -52,6 +53,7 @@ suppport dynamic rotation with XRandR, and Xv overlay support.
 %setup -qn %{distname}
 # used on Guillemot eCafe
 #%patch0 -p1 -b .sds
+%patch1 -p1 -b .git~
 %if %snapshot
 ./autogen.sh
 %endif
