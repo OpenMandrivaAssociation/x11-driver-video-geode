@@ -61,9 +61,7 @@ suppport dynamic rotation with XRandR, and Xv overlay support.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
-find %{buildroot} -type f -name "*.la" -exec rm -f {} ';'
 
 %files
 %doc README TODO
