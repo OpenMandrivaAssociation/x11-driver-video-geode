@@ -1,0 +1,11 @@
+--- xf86-video-geode-2.11.14/src/geode_driver.c~	2012-11-24 10:01:15.000000000 +0000
++++ xf86-video-geode-2.11.14/src/geode_driver.c	2013-03-23 23:21:31.777565077 +0000
+@@ -59,8 +59,6 @@
+ /* Machine independent stuff */
+ #include "mipointer.h"
+ #include "micmap.h"
+-/* All drivers implementing backing store need this */
+-#include "mibstore.h"
+ #include "vgaHW.h"
+ #include "vbe.h"
+ 
