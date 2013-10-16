@@ -1,3 +1,4 @@
----
-sources:
+removed_sources:
   xf86-video-geode-2.11.14.tar.bz2: cd4b8537944bb413c531b3f8bd643885fd306a45
+sources:
+  xf86-video-geode-2.11.15.tar.bz2: 878fcc7dfea5b8626a7b3327c0af3b7701250b6a
