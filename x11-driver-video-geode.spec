@@ -2,13 +2,12 @@
 
 Summary:	X.org driver for AMD Geode GX and LX Processors
 Name:		x11-driver-video-geode
-Version:	2.11.15
-Release:	8
+Version:	2.11.16
+Release:	1
 Group:		System/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-geode-%{version}.tar.bz2
-Patch0:		xf86-video-geode-xorg-1.15-buildfix.patch
 BuildRequires:	pkgconfig(xorg-macros)
 BuildRequires:	pkgconfig(xorg-server)
 BuildRequires:	pkgconfig(xproto)
@@ -31,7 +30,8 @@ suppport dynamic rotation with XRandR, and Xv overlay support.
 %apply_patches
 
 %build
-%configure2_5x
+export CC=gcc
+%configure
 %make
 
 %install
