@@ -27,7 +27,7 @@ suppport dynamic rotation with XRandR, and Xv overlay support.
 
 %prep
 %setup -qn xf86-video-geode-%{version}
-%apply_patches
+%autopatch -p1
 
 %build
 export CC=gcc
