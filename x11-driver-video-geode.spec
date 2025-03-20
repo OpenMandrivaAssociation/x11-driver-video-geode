@@ -3,7 +3,7 @@
 
 Summary:	X.org driver for AMD Geode GX and LX Processors
 Name:		x11-driver-video-geode
-Version:	2.11.21
+Version:	2.18.1
 Release:	1
 Group:		System/X11
 License:	MIT
